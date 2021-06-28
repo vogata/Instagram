@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		291380F62685DC6C003AC878 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291380F52685DC6C003AC878 /* Const.swift */; };
+		291380F92685E16D003AC878 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291380F82685E16D003AC878 /* PostData.swift */; };
+		291380FD2685E352003AC878 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291380FB2685E352003AC878 /* PostTableViewCell.swift */; };
+		291380FE2685E352003AC878 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291380FC2685E352003AC878 /* PostTableViewCell.xib */; };
 		29A769A62680845500F8BA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A769A52680845500F8BA41 /* AppDelegate.swift */; };
 		29A769A82680845500F8BA41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A769A72680845500F8BA41 /* SceneDelegate.swift */; };
 		29A769AD2680845500F8BA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A769AB2680845500F8BA41 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		270E93FA0AE54D91E2AD0EC1 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		291380F52685DC6C003AC878 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		291380F82685E16D003AC878 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		291380FB2685E352003AC878 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		291380FC2685E352003AC878 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		29A769A22680845500F8BA41 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A769A52680845500F8BA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A769A72680845500F8BA41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +89,10 @@
 				29A769AB2680845500F8BA41 /* Main.storyboard */,
 				291380F52685DC6C003AC878 /* Const.swift */,
 				29A769D32680926B00F8BA41 /* GoogleService-Info.plist */,
+				291380FB2685E352003AC878 /* PostTableViewCell.swift */,
+				291380FC2685E352003AC878 /* PostTableViewCell.xib */,
 				29A769CC26808B9700F8BA41 /* TabBarController.swift */,
+				291380F82685E16D003AC878 /* PostData.swift */,
 				29A769AE2680845600F8BA41 /* Assets.xcassets */,
 				29A769B02680845600F8BA41 /* LaunchScreen.storyboard */,
 				29A769C52680859600F8BA41 /* PostViewController.swift */,
@@ -172,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A769B22680845600F8BA41 /* LaunchScreen.storyboard in Resources */,
+				291380FE2685E352003AC878 /* PostTableViewCell.xib in Resources */,
 				29A769D42680926C00F8BA41 /* GoogleService-Info.plist in Resources */,
 				29A769AF2680845600F8BA41 /* Assets.xcassets in Resources */,
 				29A769AD2680845500F8BA41 /* Main.storyboard in Resources */,
@@ -227,11 +237,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				291380FD2685E352003AC878 /* PostTableViewCell.swift in Sources */,
 				29A769C32680858200F8BA41 /* ImageSelectViewController.swift in Sources */,
 				29A769CD26808B9700F8BA41 /* TabBarController.swift in Sources */,
 				29A769C02680856000F8BA41 /* HomeViewController.swift in Sources */,
 				29A769C62680859600F8BA41 /* PostViewController.swift in Sources */,
 				29A769C9268085A500F8BA41 /* SettingViewController.swift in Sources */,
+				291380F92685E16D003AC878 /* PostData.swift in Sources */,
 				29A769BD2680855300F8BA41 /* LoginViewController.swift in Sources */,
 				29A769A62680845500F8BA41 /* AppDelegate.swift in Sources */,
 				29A769A82680845500F8BA41 /* SceneDelegate.swift in Sources */,

@@ -93,10 +93,25 @@
                     <view key="view" contentMode="scaleToFill" id="bnb-RH-PVX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Swe-ZE-C5Q">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cC0-hb-cyg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cC0-hb-cyg" firstAttribute="trailing" secondItem="Swe-ZE-C5Q" secondAttribute="trailing" id="3bi-pf-ojs"/>
+                            <constraint firstItem="Swe-ZE-C5Q" firstAttribute="top" secondItem="cC0-hb-cyg" secondAttribute="top" id="OiF-Ym-yss"/>
+                            <constraint firstItem="Swe-ZE-C5Q" firstAttribute="leading" secondItem="cC0-hb-cyg" secondAttribute="leading" id="tsJ-Zy-ZRF"/>
+                            <constraint firstItem="cC0-hb-cyg" firstAttribute="bottom" secondItem="Swe-ZE-C5Q" secondAttribute="bottom" id="wT2-9A-wzx"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="IDq-df-fi6"/>
+                    <connections>
+                        <outlet property="tableView" destination="Swe-ZE-C5Q" id="hYa-2h-Wtp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLe-3h-6x9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
