@@ -15,6 +15,7 @@ class PostData: NSObject {
     var date: Date?
     var likes: [String] = []
     var isLiked: Bool = false
+    var comments: [Comment] = []
 
     init(document: QueryDocumentSnapshot) {
         self.id = document.documentID
@@ -35,6 +36,9 @@ class PostData: NSObject {
                 // myidがあれば、いいねを押していると認識する。
                 self.isLiked = true
             }
+        }
+        if let comments = postDic["comments"] as? [[String : Any]] {
+            self.comments = comments.map(Comment.init)
         }
     }
 }

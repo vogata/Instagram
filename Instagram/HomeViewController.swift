@@ -71,21 +71,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.setPostData(postArray[indexPath.row])
         
         // セル内のボタンのアクションをソースコードで設定する
-        cell.likeButton.addTarget(self, action: #selector(handleButton(_:forEvent:)), for: .touchUpInside)
+        cell.likeButton.addTarget(self, action: #selector(handleLikeButton(_:forEvent:)), for: .touchUpInside)
+        cell.commentButton.addTarget(self, action: #selector(handleCommentButton(_:forEvent:)), for: .touchUpInside)
 
         return cell
     }
     
-    @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent) {
+    @objc func handleLikeButton(_ sender: UIButton, forEvent event: UIEvent) {
         print("DEBUG_PRINT: likeボタンがタップされました。")
-
-        // タップされたセルのインデックスを求める
-        let touch = event.allTouches?.first
-        let point = touch!.location(in: self.tableView)
-        let indexPath = tableView.indexPathForRow(at: point)
-
+        
         // 配列からタップされたインデックスのデータを取り出す
-        let postData = postArray[indexPath!.row]
+        let postData = self.getPostDataFromEvent(forEvent: event)!
 
         // likesを更新する
         if let myid = Auth.auth().currentUser?.uid {
@@ -103,5 +99,29 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
             postRef.updateData(["likes": updateValue])
         }
+    }
+    
+    @objc func handleCommentButton(_ sender: UIButton, forEvent event: UIEvent) {
+        print("DEBUG_PRINT: commentボタンがタップされました。")
+        
+        let inputCommentController = self.storyboard?.instantiateViewController(withIdentifier: "InputComment") as? InputCommentViewController
+        inputCommentController!.postData = self.getPostDataFromEvent(forEvent: event)!
+        self.present(inputCommentController!, animated: true, completion: nil)
+    }
+    
+    /// 投稿データをイベントから取得
+    func getPostDataFromEvent(forEvent event: UIEvent) -> PostData?
+    {
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+
+        // 配列からタップされたインデックスのデータを取り出す
+        if let row = indexPath?.row{
+            return postArray[row]
+        }
+        
+        return nil
     }
 }

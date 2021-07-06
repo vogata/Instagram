@@ -11,6 +11,8 @@
 		291380F92685E16D003AC878 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291380F82685E16D003AC878 /* PostData.swift */; };
 		291380FD2685E352003AC878 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291380FB2685E352003AC878 /* PostTableViewCell.swift */; };
 		291380FE2685E352003AC878 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291380FC2685E352003AC878 /* PostTableViewCell.xib */; };
+		292D4B34268DBCBF00FBB331 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292D4B33268DBCBE00FBB331 /* Comment.swift */; };
+		299B1DD32689CD9800D42656 /* InputCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B1DD22689CD9800D42656 /* InputCommentViewController.swift */; };
 		29A769A62680845500F8BA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A769A52680845500F8BA41 /* AppDelegate.swift */; };
 		29A769A82680845500F8BA41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A769A72680845500F8BA41 /* SceneDelegate.swift */; };
 		29A769AD2680845500F8BA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A769AB2680845500F8BA41 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		291380F82685E16D003AC878 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		291380FB2685E352003AC878 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		291380FC2685E352003AC878 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		292D4B33268DBCBE00FBB331 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		299B1DD22689CD9800D42656 /* InputCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCommentViewController.swift; sourceTree = "<group>"; };
 		29A769A22680845500F8BA41 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A769A52680845500F8BA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A769A72680845500F8BA41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				29A769A52680845500F8BA41 /* AppDelegate.swift */,
+				292D4B33268DBCBE00FBB331 /* Comment.swift */,
 				29A769A72680845500F8BA41 /* SceneDelegate.swift */,
 				29A769C22680858200F8BA41 /* ImageSelectViewController.swift */,
+				299B1DD22689CD9800D42656 /* InputCommentViewController.swift */,
 				29A769AB2680845500F8BA41 /* Main.storyboard */,
 				291380F52685DC6C003AC878 /* Const.swift */,
 				29A769D32680926B00F8BA41 /* GoogleService-Info.plist */,
@@ -245,8 +251,10 @@
 				29A769C9268085A500F8BA41 /* SettingViewController.swift in Sources */,
 				291380F92685E16D003AC878 /* PostData.swift in Sources */,
 				29A769BD2680855300F8BA41 /* LoginViewController.swift in Sources */,
+				292D4B34268DBCBF00FBB331 /* Comment.swift in Sources */,
 				29A769A62680845500F8BA41 /* AppDelegate.swift in Sources */,
 				29A769A82680845500F8BA41 /* SceneDelegate.swift in Sources */,
+				299B1DD32689CD9800D42656 /* InputCommentViewController.swift in Sources */,
 				291380F62685DC6C003AC878 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
